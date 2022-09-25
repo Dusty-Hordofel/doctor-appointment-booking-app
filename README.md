@@ -5,4 +5,4 @@ Section 1. Introduction
    I. npm init -y
    II. npm i express mongoose jsonwebtoken dotenv
    III. create a server
-3.
+3. Mongo Setup
