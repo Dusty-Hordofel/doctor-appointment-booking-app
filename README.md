@@ -30,6 +30,34 @@
 
 ### 9. User Login
 
+## Section 4. Authorization and Protected Routes
+
+### 10. Authorization
+
+- create authMiddleware to validate the token
+
+### 11. Redux toolkit setup
+
+- create slice, store and reducers
+
+### 12. Alert messages and loaders
+
+### 13. Protected Routes
+
+### 14.
+
+### 15.
+
+### 16.
+
+### 17.
+
+### 18.
+
+### 19.
+
+### 20.
+
 ### 📚 MERN Stack References
 
 - 🔗 [Official Site for MongoDB](https://mongodb.com)
@@ -59,6 +87,7 @@
 - 🔗 [moment](https://www.npmjs.com/package/moment)
 - 🔗 [axios](https://www.npmjs.com/package/axios)
 - 🔗 [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
+- 🔗 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 
 ### ⚙ Tools:
 
