@@ -22,4 +22,10 @@
 
 ### 6. Login Register UI
 
-### 7.
+## Section 3. Login Registration Backend
+
+### 7. User Model
+
+### 8. User Registration
+
+### 9. User Login
