@@ -1,10 +1,33 @@
 import { Button, Form, Input } from "antd";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { API_BASE_URL } from "../config/config";
 
 function Register() {
+  const navigate = useNavigate();
   const onFinish = async (values) => {
     console.log("received values of form: ", values);
+    try {
+      const response = await axios.post(
+        `${API_BASE_URL}/api/user/register`,
+        values
+      );
+      console.log(
+        "🚀 ~ file: Register.jsx ~ line 15 ~ onFinish ~ API_BASE_URL",
+        API_BASE_URL
+      );
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+        navigate("/login");
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
   };
 
   return (
