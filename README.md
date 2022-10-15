@@ -34,7 +34,11 @@
 
 ### 10. Authorization
 
+- create authMiddleware to validate the token
+
 ### 11. Redux toolkit setup
+
+- create slice, store and reducers
 
 ### 12. Alert messages and loaders
 
@@ -83,6 +87,7 @@
 - 🔗 [moment](https://www.npmjs.com/package/moment)
 - 🔗 [axios](https://www.npmjs.com/package/axios)
 - 🔗 [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
+- 🔗 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 
 ### ⚙ Tools:
 

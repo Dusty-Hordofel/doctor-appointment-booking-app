@@ -2,11 +2,14 @@ import { Button, Form, Input } from "antd";
 import axios from "axios";
 import React from "react";
 import { toast } from "react-hot-toast";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Link, useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../config/config";
 
 function Login() {
+  const { loading } = useSelector((state) => state.alerts); //select the state
+  console.log("🚀 ~ file: Login.jsx ~ line 12 ~ Login ~ loading", loading);
   const navigate = useNavigate();
   const onFinish = async (values) => {
     console.log("send values of form: ", values);
