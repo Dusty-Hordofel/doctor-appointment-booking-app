@@ -4,16 +4,21 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { API_BASE_URL } from "../config/config";
+import { useDispatch } from "react-redux";
+import { hideLoading, showLoading } from "../redux/alertsSlice";
 
 function Register() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const onFinish = async (values) => {
     console.log("received values of form: ", values);
     try {
+      dispatch(showLoading());
       const response = await axios.post(
         `${API_BASE_URL}/api/user/register`,
         values
       );
+      dispatch(hideLoading());
       console.log(
         "🚀 ~ file: Register.jsx ~ line 15 ~ onFinish ~ API_BASE_URL",
         API_BASE_URL
@@ -26,6 +31,7 @@ function Register() {
         toast.error(response.data.message);
       }
     } catch (error) {
+      dispatch(hideLoading());
       toast.error("Something went wrong");
     }
   };
