@@ -1,16 +1,25 @@
-Section 1. Introduction
+## Section 1. Introduction
 
-1. React Setup
+### 1. React Setup
 
-2. Node Setup
-   I. npm init -y
-   II. npm i express mongoose jsonwebtoken dotenv
-   III. create a server
+### 2. Node Setup
 
-3. Mongo Setup
-4. Mongo Connection
+- npm init -y
+- npm i express mongoose jsonwebtoken dotenv
+- create a server
 
-5. ANTD Setup
-   I. npm i react-router-dom antd
-   II. use Bootstrap CDN
-   III. create <Login/> & <Register/>
+### 3. Mongo Setup
+
+### 4. Mongo Connection
+
+### 5. ANTD Setup
+
+- npm i react-router-dom antd
+- use Bootstrap CDN
+- create <Login/> & <Register/>
+
+## Section 2. Login Registration Sreens
+
+### 6. Login Register UI
+
+### 7.
