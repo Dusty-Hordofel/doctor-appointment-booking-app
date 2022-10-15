@@ -1,11 +1,31 @@
 import { Button, Form, Input } from "antd";
+import axios from "axios";
 import React from "react";
+import { toast } from "react-hot-toast";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/config";
 
 function Login() {
+  const navigate = useNavigate();
   const onFinish = async (values) => {
     console.log("send values of form: ", values);
+    try {
+      const response = await axios.post(
+        `${API_BASE_URL}/api/user/login`,
+        values
+      );
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+        localStorage.setItem("token", response.data.data);
+        navigate("/");
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
   };
 
   return (
