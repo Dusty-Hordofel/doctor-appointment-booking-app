@@ -30,6 +30,30 @@
 
 ### 9. User Login
 
+## Section 4. Authorization and Protected Routes
+
+### 10. Authorization
+
+### 11. Redux toolkit setup
+
+### 12. Alert messages and loaders
+
+### 13. Protected Routes
+
+### 14.
+
+### 15.
+
+### 16.
+
+### 17.
+
+### 18.
+
+### 19.
+
+### 20.
+
 ### 📚 MERN Stack References
 
 - 🔗 [Official Site for MongoDB](https://mongodb.com)
