@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../config/config";
+import Layout from "../components/Layout";
 
 function Home() {
   const [doctors, setDoctors] = useState([]);
@@ -26,7 +27,11 @@ function Home() {
   useEffect(() => {
     getData();
   }, []);
-  return <>Home</>;
+  return (
+    <>
+      <Layout>Home</Layout>
+    </>
+  );
 }
 
 export default Home;
