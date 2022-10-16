@@ -25,6 +25,7 @@ function ProtectedRoute(props) {
         }
       );
       dispatch(hideLoading());
+      //TODO: dispatch userInfo to userSlice
       if (response.data.success) {
         dispatch(setUser(response.data.data));
       } else {
