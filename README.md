@@ -44,13 +44,15 @@
 
 ### 13. Protected Routes
 
-### 14.
+## Section 5. Layout
 
-### 15.
+### 14. Layout Structure-menu-Collapsed
 
-### 16.
+### 15. Layout menu
 
-### 17.
+### 16. Layout Collapsed
+
+### 17. Seperate Menu for User and Admin
 
 ### 18.
 
@@ -93,6 +95,7 @@
 
 - 🔗 [React Dev Tools Extension for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - 🔗 [Ngrok for VSCode](https://marketplace.visualstudio.com/items?itemName=philnash.ngrok-for-vscode)
+- 🔗 [remixicon](https://remixicon.com/)
 
 ### ⚙ VS Code Extensions I Use:
 

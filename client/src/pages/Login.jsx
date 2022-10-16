@@ -9,8 +9,6 @@ import { API_BASE_URL } from "../config/config";
 import { hideLoading, showLoading } from "../redux/alertsSlice";
 
 function Login() {
-  // const { loading } = useSelector((state) => state.alerts); //select the state
-  // console.log("🚀 ~ file: Login.jsx ~ line 12 ~ Login ~ loading", loading);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const onFinish = async (values) => {
