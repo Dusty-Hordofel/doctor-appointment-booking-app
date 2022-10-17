@@ -54,15 +54,27 @@
 
 ### 16. Apply Doctor API
 
-## Section 7. Appliying for Doctor
+## Section 7. Notifications
 
-### 17.
+### 17. Notifications
 
-### 18.
+## Section 8. Users / Doctors List
+
+### 18. Users, Doctors list API & Admin actions
 
 ### 19.
 
 ### 20.
+
+### 21.
+
+## Section 9. Update Doctor Profile
+
+### 22.
+
+### 23.
+
+### 24.
 
 ### 📚 MERN Stack References
 

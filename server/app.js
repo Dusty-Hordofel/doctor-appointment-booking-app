@@ -3,11 +3,14 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const cors = require("cors");
 const createError = require("http-errors");
-const userRoutes = require("./routes/userRoutes");
 dotenv.config();
 const app = express();
 
 const dbConfig = require("./config/db");
+
+//Routes
+const userRoutes = require("./routes/userRoute");
+const adminRoute = require("./routes/adminRoute");
 
 app.use(morgan("dev"));
 app.use(cors());
@@ -17,6 +20,7 @@ app.use(express.urlencoded({ limit: "5mb", extended: true }));
 const PREFIX = "/" + process.env.PREFIX;
 
 app.use(PREFIX, userRoutes);
+app.use("/api/admin", adminRoute);
 
 // console.log(process.env.MONGO_URL);
 const port = process.env.PORT || 3810;
