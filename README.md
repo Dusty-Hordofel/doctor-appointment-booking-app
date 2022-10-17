@@ -54,6 +54,8 @@
 
 ### 16. Apply Doctor API
 
+## Section 7. Appliying for Doctor
+
 ### 17.
 
 ### 18.

@@ -110,6 +110,7 @@ function DoctorForm({ onFinish, initivalValues }) {
             name="timings"
             rules={[{ required: true }]}
           >
+            {/*TimePicker from AntD  */}
             <TimePicker.RangePicker format="HH:mm" />
           </Form.Item>
         </Col>

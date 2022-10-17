@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/userModel");
+const Doctor = require("../models/doctorModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const authMiddleware = require("../middlewares/authMiddleware");
+const createError = require("http-errors");
 
 router.post("/user/register", async (req, res) => {
   try {
@@ -101,6 +103,56 @@ router.post("/user/get-user-info-by-id", authMiddleware, async (req, res) => {
     res
       .status(500)
       .send({ message: "Error getting user info", success: false, error });
+  }
+});
+
+router.post("/user/apply-doctor-account", authMiddleware, async (req, res) => {
+  try {
+    //TODO: create a new doctor
+    const newdoctor = new Doctor({ ...req.body, status: "pending" });
+    //TODO:  save a new Doctor
+    await newdoctor.save();
+
+    //TODO:find the admin user , we have only one admin user
+    const adminUser = await User.findOne({ isAdmin: true });
+    //TODO:if admin doesn't exist
+    if (!adminUser) {
+      return res
+        .status(200)
+        .send({ message: "Admin user doesn't exist", success: false });
+    }
+
+    //TODO: unseenNotifications for admin user
+    const unseenNotifications = adminUser.unseenNotifications;
+    unseenNotifications.push({
+      type: "new-doctor-request",
+      message: `${newdoctor.firstName} ${newdoctor.lastName} has applied for a doctor account`,
+      data: {
+        doctorId: newdoctor._id,
+        name: newdoctor.firstName + " " + newdoctor.lastName,
+      },
+      onClickPath: "/admin/doctorslist", //onClickPath is used to
+    });
+
+    //TODO: Push a new notification to  admin user updating unseenNotifications
+    await User.findByIdAndUpdate(adminUser._id, { unseenNotifications });
+
+    //TODO: send notification to client
+    res.status(200).send({
+      success: true,
+      message: "Doctor account applied successfully",
+    });
+  } catch (error) {
+    console.log(
+      "🚀 ~ file: userRoutes.js ~ line 142 ~ router.post ~ error",
+      error
+    );
+
+    res.status(500).send({
+      message: "Error applying doctor account",
+      success: false,
+      error,
+    });
   }
 });
 
