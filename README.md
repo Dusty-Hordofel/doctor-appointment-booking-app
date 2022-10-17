@@ -46,13 +46,17 @@
 
 ## Section 5. Layout
 
-### 14. Layout Structure-menu-Collapsed
+### 14. Layout Structure-menu-Collapsed & Seperate Menu for User and Admin
 
-### 15. Layout menu
+## Section 6. Appliying for Doctor
 
-### 16. Layout Collapsed
+### 15. Apply Doctor - UI
 
-### 17. Seperate Menu for User and Admin
+### 16. Apply Doctor API
+
+## Section 7. Appliying for Doctor
+
+### 17.
 
 ### 18.
 
@@ -77,8 +81,6 @@
 - 🔗 [express-jwt-authz: Using Middleware](https://www.npmjs.com/package/express-jwt-authz)
 - 🔗 [cors](https://www.npmjs.com/package/cors)
 - 🔗 [morgan](https://www.npmjs.com/package/morgan)
-- 🔗 [http-errors](https://www.npmjs.com/package/http-errors)
-- 🔗 [joi](https://www.npmjs.com/package/joi)
 
 ### 📚 Other Node.js REST API Dependencies
 
@@ -90,6 +92,7 @@
 - 🔗 [axios](https://www.npmjs.com/package/axios)
 - 🔗 [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
 - 🔗 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+- 🔗 [moment](https://www.npmjs.com/package/moment)
 
 ### ⚙ Tools:
 
