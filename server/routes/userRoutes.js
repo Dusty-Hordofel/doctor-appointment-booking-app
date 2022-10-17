@@ -156,4 +156,74 @@ router.post("/user/apply-doctor-account", authMiddleware, async (req, res) => {
   }
 });
 
+//TODO: MARK ALL NOTIFICATIONS AS SEEN
+router.post(
+  "/user/mark-all-notifications-as-seen",
+  authMiddleware,
+  async (req, res) => {
+    try {
+      //TODO: find user by id
+      const user = await User.findOne({ _id: req.body.userId });
+
+      const unseenNotifications = user.unseenNotifications;
+      const seenNotifications = user.seenNotifications;
+      //TODO: Add unseenNotifications to seenNotifications
+      seenNotifications.push(...unseenNotifications);
+      user.unseenNotifications = [];
+      user.seenNotifications = seenNotifications;
+      //TODO: Save Changes
+      const updatedUser = await user.save();
+      //TODO: set password to undefined before sending message to client
+      updatedUser.password = undefined;
+      //TODO: Send message to client
+      res.status(200).send({
+        success: true,
+        message: "All notifications marked as seen",
+        data: updatedUser,
+      });
+    } catch (error) {
+      console.log(error);
+      //TODO:Handle error messages
+      res.status(500).send({
+        message: "Error applying doctor account",
+        success: false,
+        error,
+      });
+    }
+  }
+);
+
+//TODO: DELETE ALL NOTIFICATIONS
+router.post(
+  "/user/delete-all-notifications",
+  authMiddleware,
+  async (req, res) => {
+    try {
+      //TODO: find user by id
+      const user = await User.findOne({ _id: req.body.userId });
+      //TODO: Empty seenNotifications and unseenNotifications
+      user.seenNotifications = [];
+      user.unseenNotifications = [];
+      //TODO: save changes
+      const updatedUser = await user.save();
+      //TODO: set password to undefined before sending message to client
+      updatedUser.password = undefined;
+      //TODO: send message to client
+      res.status(200).send({
+        success: true,
+        message: "All notifications cleared",
+        data: updatedUser,
+      });
+    } catch (error) {
+      console.log(error);
+      //TODO:Handle error messages
+      res.status(500).send({
+        message: "Error applying doctor account",
+        success: false,
+        error,
+      });
+    }
+  }
+);
+
 module.exports = router;
