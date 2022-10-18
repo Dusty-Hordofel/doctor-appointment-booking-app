@@ -66,15 +66,19 @@
 
 ## Section 9. Update Doctor Profile
 
-### 20.
+### 20. Update Doctor Profile
 
-### 21.
+## Section 10. Booking Flow
 
-### 22.
+### 21. Display All Doctors
 
-### 23.
+### 22. Booking Screen UI, API & Availability Check
 
-### 24.
+## Section 11. Booking Lists
+
+### 23. User Appointments
+
+### 24. Doctor Appointments
 
 ### 📚 MERN Stack References
 
@@ -105,6 +109,7 @@
 - 🔗 [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
 - 🔗 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 - 🔗 [moment](https://www.npmjs.com/package/moment)
+- 🔗 [DatePicker](https://www.npmjs.com/package/react-date-picker)
 
 ### ⚙ Tools:
 
