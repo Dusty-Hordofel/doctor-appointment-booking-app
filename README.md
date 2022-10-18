@@ -60,9 +60,9 @@
 
 ## Section 8. Users / Doctors List
 
-### 18. Users, Doctors list API & Admin actions
+### 18. Users, Doctors list API
 
-### 19.
+### 19. Admin actions
 
 ### 20.
 

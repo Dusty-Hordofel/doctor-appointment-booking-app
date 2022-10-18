@@ -13,7 +13,7 @@ function Userslist() {
   const getUsersData = async () => {
     try {
       dispatch(showLoading());
-      const resposne = await axios.get(
+      const response = await axios.get(
         `${API_BASE_URL}/api/admin/get-all-users`,
         {
           headers: {
@@ -22,8 +22,8 @@ function Userslist() {
         }
       );
       dispatch(hideLoading());
-      if (resposne.data.success) {
-        setUsers(resposne.data.data);
+      if (response.data.success) {
+        setUsers(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());
