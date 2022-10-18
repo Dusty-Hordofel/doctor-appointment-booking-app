@@ -156,7 +156,7 @@ router.post("/user/apply-doctor-account", authMiddleware, async (req, res) => {
   }
 });
 
-//TODO: MARK ALL NOTIFICATIONS AS SEEN
+//MARK ALL NOTIFICATIONS AS SEEN
 router.post(
   "/user/mark-all-notifications-as-seen",
   authMiddleware,
@@ -193,7 +193,7 @@ router.post(
   }
 );
 
-//TODO: DELETE ALL NOTIFICATIONS
+//DELETE ALL NOTIFICATIONS
 router.post(
   "/user/delete-all-notifications",
   authMiddleware,
@@ -217,6 +217,29 @@ router.post(
     } catch (error) {
       console.log(error);
       //TODO:Handle error messages
+      res.status(500).send({
+        message: "Error applying doctor account",
+        success: false,
+        error,
+      });
+    }
+  }
+);
+
+//GET ALL APPROVED DOCTORS LIST
+router.get(
+  "/user/get-all-approved-doctors",
+  authMiddleware,
+  async (req, res) => {
+    try {
+      const doctors = await Doctor.find({ status: "approved" });
+      res.status(200).send({
+        message: "Doctors fetched successfully",
+        success: true,
+        data: doctors,
+      });
+    } catch (error) {
+      console.log(error);
       res.status(500).send({
         message: "Error applying doctor account",
         success: false,

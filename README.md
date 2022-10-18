@@ -66,15 +66,17 @@
 
 ## Section 9. Update Doctor Profile
 
-### 20.
+### 20. Update Doctor Profile
 
-### 21.
+## Section 10. Booking Flow
 
-### 22.
+### 21. Display All Doctors
 
-### 23.
+### 22. Booking Screen UI
 
-### 24.
+### 23. Booking API
+
+### 24. Availability Check
 
 ### 📚 MERN Stack References
 
