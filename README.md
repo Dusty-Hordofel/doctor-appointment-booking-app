@@ -64,11 +64,11 @@
 
 ### 19. Admin actions
 
+## Section 9. Update Doctor Profile
+
 ### 20.
 
 ### 21.
-
-## Section 9. Update Doctor Profile
 
 ### 22.
 

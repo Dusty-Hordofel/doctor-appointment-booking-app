@@ -11,6 +11,7 @@ const dbConfig = require("./config/db");
 //Routes
 const userRoutes = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
+const doctorRoute = require("./routes/doctorsRoute");
 
 app.use(morgan("dev"));
 app.use(cors());
@@ -21,6 +22,7 @@ const PREFIX = "/" + process.env.PREFIX;
 
 app.use(PREFIX, userRoutes);
 app.use("/api/admin", adminRoute);
+app.use("/api/doctor", doctorRoute);
 
 // console.log(process.env.MONGO_URL);
 const port = process.env.PORT || 3810;
