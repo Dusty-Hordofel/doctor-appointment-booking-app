@@ -72,11 +72,13 @@
 
 ### 21. Display All Doctors
 
-### 22. Booking Screen UI
+### 22. Booking Screen UI, API & Availability Check
 
-### 23. Booking API
+## Section 11. Booking Lists
 
-### 24. Availability Check
+### 23. User Appointments
+
+### 24. Doctor Appointments
 
 ### 📚 MERN Stack References
 
