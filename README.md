@@ -107,6 +107,7 @@
 - 🔗 [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
 - 🔗 [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
 - 🔗 [moment](https://www.npmjs.com/package/moment)
+- 🔗 [DatePicker](https://www.npmjs.com/package/react-date-picker)
 
 ### ⚙ Tools:
 
