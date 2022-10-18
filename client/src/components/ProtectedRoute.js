@@ -7,7 +7,7 @@ import { setUser } from "../redux/userSlice";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 import { API_BASE_URL } from "../config/config";
 
-function ProtectedRoute(props) {
+function ProtectedRoute({ children }) {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ function ProtectedRoute(props) {
   }, [user]);
 
   if (localStorage.getItem("token")) {
-    return props.children;
+    return children;
   } else {
     return <Navigate to="/login" />;
   }
