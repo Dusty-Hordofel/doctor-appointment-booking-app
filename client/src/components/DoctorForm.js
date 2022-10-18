@@ -13,8 +13,8 @@ function DoctorForm({ onFinish, initivalValues }) {
           timings: [
             moment(initivalValues?.timings[0], "HH:mm"),
             moment(initivalValues?.timings[1], "HH:mm"),
-          ],
-        }),
+          ], //format timing
+        }), //conditionnal rendering: we only format if there are initivalValues
       }}
     >
       <h1 className="card-title mt-3">Personal Information</h1>
