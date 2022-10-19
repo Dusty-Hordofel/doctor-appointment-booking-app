@@ -3,7 +3,7 @@ import axios from "axios";
 import Layout from "../components/Layout";
 import { Col, Row } from "antd";
 import Doctor from "../components/Doctor";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 import { API_BASE_URL } from "../config/config";
 
@@ -32,6 +32,7 @@ function Home() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Layout>

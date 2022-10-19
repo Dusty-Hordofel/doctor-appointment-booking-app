@@ -109,6 +109,7 @@ function DoctorAppointments() {
   ];
   useEffect(() => {
     getAppointmentsData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Layout>
