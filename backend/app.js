@@ -6,7 +6,9 @@ dotenv.config();
 
 const dbConfig = require("./config/db");
 //Routes
-const userRoutes = require("./routes/userRoute");
+const userRoute = require("./routes/userRoute");
+const adminRoute = require("./routes/adminRoute");
+const doctorRoute = require("./routes/doctorsRoute");
 // console.log("🚀 ~ file: app.js ~ line 10 ~ userRoutes", userRoutes);
 // // app.use(morgan("dev"));
 app.use(cors());
@@ -16,7 +18,9 @@ app.use(express.urlencoded({ limit: "5mb", extended: true }));
 const PREFIX = "/" + process.env.PREFIX;
 console.log("🚀 ~ file: app.js ~ line 17 ~ PREFIX", PREFIX);
 
-app.use(PREFIX, userRoutes);
+app.use(PREFIX, userRoute);
+app.use("/api/admin", adminRoute);
+app.use("/api/doctor", doctorRoute);
 
 const port = process.env.PORT || 3838;
 app.listen(port, () => {
