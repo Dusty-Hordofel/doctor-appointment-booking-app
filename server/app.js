@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 // const morgan = require("morgan");
 const cors = require("cors");
-const path = require("path");
 const app = express();
 dotenv.config();
 
@@ -19,6 +18,7 @@ app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ limit: "5mb", extended: true }));
 
 const PREFIX = "/" + process.env.PREFIX;
+console.log("🚀 ~ file: app.js ~ line 21 ~ PREFIX", PREFIX);
 
 app.use(PREFIX, userRoutes);
 app.use("/api/admin", adminRoute);
