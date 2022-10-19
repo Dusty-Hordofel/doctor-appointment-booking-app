@@ -11,7 +11,12 @@ const adminRoute = require("./routes/adminRoute");
 const doctorRoute = require("./routes/doctorsRoute");
 // console.log("🚀 ~ file: app.js ~ line 10 ~ userRoutes", userRoutes);
 // // app.use(morgan("dev"));
-app.use(cors());
+
+console.log(process.env.CORS_ORIGIN);
+
+const corsOptions = { origin: process.env.CORS_ORIGIN };
+app.use(cors(corsOptions));
+
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ limit: "5mb", extended: true }));
 
