@@ -22,6 +22,10 @@ app.use(PREFIX, userRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api/doctor", doctorRoute);
 
+app.use("/", (req, res) => {
+  res.send("Everything is good!");
+});
+
 const port = process.env.PORT || 3838;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
