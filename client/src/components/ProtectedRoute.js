@@ -43,6 +43,7 @@ function ProtectedRoute({ children }) {
     if (!user) {
       getUser();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   if (localStorage.getItem("token")) {
