@@ -1,4 +1,3 @@
-import { Button, Col, Form, Input, Row, TimePicker } from "antd";
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -75,6 +74,7 @@ function Profile() {
 
   useEffect(() => {
     getDoctorData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Layout>

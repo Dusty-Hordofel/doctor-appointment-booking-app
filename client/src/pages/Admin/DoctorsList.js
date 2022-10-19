@@ -55,6 +55,7 @@ function DoctorsList() {
   };
   useEffect(() => {
     getDoctorsData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const columns = [

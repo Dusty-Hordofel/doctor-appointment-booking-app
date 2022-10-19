@@ -1,5 +1,4 @@
 import "antd/dist/antd.min.css"; // or 'antd/dist/antd.less'
-import { Button } from "antd";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Login from "./pages/Login";
